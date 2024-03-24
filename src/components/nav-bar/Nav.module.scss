@@ -1,0 +1,41 @@
+.link {
+	text-decoration: none;
+	position: relative;
+
+	&:after {
+		background: none repeat scroll 0 0 transparent;
+		margin-top: 12px;
+		content: '';
+		display: block;
+		height: 1px;
+		left: 50%;
+		position: absolute;
+		top: 12px;
+		background: white;
+		transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		width: 0;
+	}
+
+	&:hover::after {
+		width: 100%;
+		left: 0;
+	}
+}
+
+.linkActive {
+	text-decoration: none;
+	position: relative;
+
+	&:after {
+		background: none repeat scroll 0 0 transparent;
+		margin-top: 12px;
+		content: '';
+		display: block;
+		height: 1px;
+		position: absolute;
+		top: 12px;
+		background: #fff;
+		transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		width: 100%; /* Устанавливаем ширину на 100%, чтобы черточка была видна */
+	}
+}

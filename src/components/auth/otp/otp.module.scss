@@ -1,0 +1,7 @@
+.form {
+	@apply fixed inset-0 w-fit h-fit m-auto flex justify-center flex-col text-center;
+
+	.label {
+		@apply text-3xl xss:text-xl;
+	}
+}
