@@ -5,7 +5,7 @@ import styles from './Nav.module.scss'
 const Nav = ({ currentPath }: { currentPath: Routes | undefined }) => {
 	return (
 		<>
-			<ul className='grid gap-3'>
+			<ul className='grid gap-4'>
 				{routes.map(item => (
 					<li key={item.route}>
 						<Link
