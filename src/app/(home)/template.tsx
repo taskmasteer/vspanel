@@ -4,6 +4,7 @@ import Navigation from '@/components/nav-bar/Navigation'
 import { Button } from '@/components/ui/button'
 import HamburgerMenu from '@/components/ui/hamburger/Hamburger'
 import { Access, routes } from '@/routes/routes'
+import { ChevronLeft } from 'lucide-react'
 import { usePathname, useRouter } from 'next/navigation'
 export default function HeadingTemplate({
 	children,
@@ -33,14 +34,18 @@ export default function HeadingTemplate({
 						</header>
 					)}
 				</div>
-				<main className='p-8'>
+				<main className='p-8 relative'>
 					{hasAccess ? (
 						children
 					) : (
-						<div className='flex justify-center items-center flex-col'>
-							<h1>Что то пошло не так...</h1>
-							<Button variant={'link'} onClick={() => router.back()}>
-								Вернуться на прошлую страницу
+						<div className='flex justify-center items-center flex-col gap-8'>
+							<h1 className='text-2xl'>Что то пошло не так...</h1>
+							<Button
+								variant={'link'}
+								onClick={() => router.back()}
+								className='text-xl'
+							>
+								<ChevronLeft /> Вернуться на прошлую страницу
 							</Button>
 						</div>
 					)}
